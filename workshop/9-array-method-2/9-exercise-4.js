@@ -11,8 +11,16 @@
 // Q4
 // Write a function that accepts a list of numbers and returns a new list with
 // all of the even numbers removed.
-function removeEvens(lst) {
-  // lst is an array of strings
+function removeEvens(arrIn) {
+  let newArray = arrIn.filter(function(item)
+  {
+    if (item % 2 > 0)
+    {
+      return true;
+    }
+  })
+  return newArray;
+
 }
 
 console.log(

@@ -12,6 +12,14 @@
 
 function countBs(str) {
 
+    let bCount = 0;
+
+    for (i =0; i<str.length; i++) {
+        if (str[i] === 'B') {
+            bCount++;
+        }
+    }
+    return bCount;
 }
 // -------------------------------------------------------------------------
 console.log('Q1: ', countBs('BananaBabyBubbles'));

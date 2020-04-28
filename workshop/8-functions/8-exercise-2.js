@@ -19,3 +19,24 @@ maxValue(4, 2, 8, 1, 5, 10, 1, 64, 2, 8, -100, 54); // 64
 
 // HINT: You'll want to use "rest parameters".
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+
+//Q2b (works for both 2a and 2B)
+
+function maxValue() {
+    // console.log(arguments);
+    
+    var numbers = [0];
+    // console.log(numbers);
+
+    for (var i = 0; i < arguments.length; i++) {
+            numbers.push(arguments[i]);
+      }
+
+    // found this "spread" argument at https://www.samanthaming.com/tidbits/48-passing-arrays-as-function-arguments/
+
+    // console.log(...numbers);
+    return Math.max(...numbers);
+
+}
+
+console.log(maxValue(4, 2, 8, 1, 5, 10, 1, 64, 2, 8, -100, 54));

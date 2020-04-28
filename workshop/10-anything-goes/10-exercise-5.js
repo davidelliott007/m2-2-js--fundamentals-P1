@@ -13,6 +13,33 @@
 
 let armstrongNumbers = [];
 
-// write your loop here...
+for (i=0; i<1000; i++)
+{
+    let iteratorCharArray = i.toString().split('');
+
+    console.log(iteratorCharArray);
+
+    let total = 0;
+    
+    iteratorCharArray.forEach(
+        function(element) {
+            let num = parseInt(element);
+            console.log('num from parseInt is',num);
+            num = num ** 3;
+            console.log('num num ** 3 is',num);
+            total = total + num;
+        }
+    );
+    
+    console.log('total is',total);
+    console.log('i is ',i);
+
+    if (total === i) {
+        console.log('armstrong! ',i);
+
+        armstrongNumbers.push(i);
+    }
+}
+
 
 console.log(armstrongNumbers);
