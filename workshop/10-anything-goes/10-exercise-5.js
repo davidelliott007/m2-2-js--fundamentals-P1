@@ -23,7 +23,7 @@ for (i=0; i<1000; i++)
     
     iteratorCharArray.forEach(
         function(element) {
-            let num = parseInt(element);
+            let num = Number(element);
             console.log('num from parseInt is',num);
             num = num ** 3;
             console.log('num num ** 3 is',num);

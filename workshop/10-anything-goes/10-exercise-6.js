@@ -16,11 +16,14 @@
 // See this site for a list of "narcissistic" numbers
 // http://mathworld.wolfram.com/NarcissisticNumber.html
 
+
+// so for this I think that I need to red-do it
+// the power is based on the length of the number - 
 function identifyArmstrongNumbers(num1, num2) {
 
     let armstrongNumbers = [];
 
-    for (i=0; i<num2; i++)
+    for (i=num1; i<num2; i++)
     {
         let iteratorCharArray = i.toString().split('');
     
@@ -30,9 +33,9 @@ function identifyArmstrongNumbers(num1, num2) {
         
         iteratorCharArray.forEach(
             function(element) {
-                let num = parseInt(element);
+                let num = Number(element);
                 // console.log('num from parseInt is',num);
-                num = num ** num1;
+                num = num ** iteratorCharArray.length;
                 // console.log('num num ** 3 is',num);
                 total = total + num;
             }
@@ -54,6 +57,5 @@ function identifyArmstrongNumbers(num1, num2) {
 }
 
 
-console.log(identifyArmstrongNumbers(3, 99999));
-console.log(identifyArmstrongNumbers(4, 99999));
-console.log(identifyArmstrongNumbers(5, 99999));
+console.log(identifyArmstrongNumbers(1, 500));
+console.log(identifyArmstrongNumbers(300, 95000));
